@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block title %}Регистрация{% endblock title %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('/bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('/bundles/sonatacore/vendor/bootstrap/dist/css/bootstrap-theme.css') }}">
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('/bundles/sonatacore/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+{% endblock javascripts %}
+{% block body %}
+{% block fos_user_content %}
+{% endblock fos_user_content %}
+{% endblock body %}
