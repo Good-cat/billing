@@ -1,5 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    Homepage.
+    {% for code in result %}
+        {{ code }}
+    {% endfor %}
+    {{ result }}
 {% endblock %}

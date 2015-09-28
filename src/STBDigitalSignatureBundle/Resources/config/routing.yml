@@ -1,0 +1,3 @@
+stb_digital_signature_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: STBDigitalSignatureBundle:Default:index }

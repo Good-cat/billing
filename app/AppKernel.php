@@ -27,6 +27,7 @@ class AppKernel extends Kernel
             new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
             new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
             new Application\Sonata\AdminBundle\ApplicationSonataAdminBundle(),
+            new STBDigitalSignatureBundle\STBDigitalSignatureBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

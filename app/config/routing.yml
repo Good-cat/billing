@@ -1,3 +1,7 @@
+stb_digital_signature:
+    resource: "@STBDigitalSignatureBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
