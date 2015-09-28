@@ -356,12 +356,12 @@ class Algorithm {
         return base_convert($this->V[$i], 16, 10);
     }
 
-    public function getC($i)
+    private function getC($i)
     {
         return base_convert($this->C[$i], 16, 10);
     }
 
-    public function getT($i, $j)
+    private function getT($i, $j)
     {
         return base_convert($this->T[$i][$j], 16, 10);
     }
@@ -371,9 +371,9 @@ class Algorithm {
         return $this->L;
     }
 
-    public function __construct()
+    public function __construct($M)
     {
-        $this->setH(base_convert('2739370C5AD3445D782A6045308942FB6798CEF93BF4AB10685D846094334AC4', 16, 10))->setL(256);
+        $this->setH(base_convert('2739370C5AD3445D782A6045308942FB6798CEF93BF4AB10685D846094334AC4', 16, 10))->setL(256)->setM($M);
     }
 
     public function hash()

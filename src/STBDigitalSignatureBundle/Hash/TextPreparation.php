@@ -19,6 +19,11 @@ class TextPreparation {
 
     private $text;
 
+    public function __construct($text)
+    {
+        $this->setText($text);
+    }
+
     public function setText($text)
     {
         $this->text = $text;
@@ -42,7 +47,7 @@ class TextPreparation {
      * Метод дополняет последовательность нулями и разбиение на блоки в соответствии с требованиями
      * используются операции повышенной точности
      */
-    public function getMNumbers()
+    public function getM()
     {
         $mRow = $this->getMRow();
         // Здесь буквы переменных соответствуют параметрам СТБ
