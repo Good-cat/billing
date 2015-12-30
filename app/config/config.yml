@@ -75,7 +75,7 @@ swiftmailer:
     spool:     { type: memory }
 
 sonata_admin:
-    title:  "Имя сайта"
+    title_logo:           bundles/app/image/image001.jpg
     templates:
         layout:                         ApplicationSonataAdminBundle::standard_layout.html.twig
 
@@ -131,3 +131,7 @@ fos_user:
   registration:
     confirmation:
       enabled: false
+
+sonata_doctrine_orm_admin:
+  templates:
+    types:

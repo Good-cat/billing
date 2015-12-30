@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
     {% for code in result %}
         {{ code }}
     {% endfor %}
     {{ result }}
+    <a href="{{ path('fos_user_registration_register') }}">Регистрация</a>
 {% endblock %}

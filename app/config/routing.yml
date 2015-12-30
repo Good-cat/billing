@@ -56,3 +56,13 @@ _sonata_admin:
   resource: .
   type: sonata_admin
   prefix: /admin
+
+logout:
+  path: /profile/logout
+
+logincheck:
+  path: /profile/login_check
+
+login:
+  path: /profile/login
+  defaults: {_controller: SonataUserBundle:AdminSecurity:login}
