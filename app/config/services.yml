@@ -12,7 +12,7 @@ services:
           class: AppBundle\Admin\DictionaryBankAdmin
           arguments: [~, AppBundle\Entity\DictionaryBank, 'SonataAdminBundle:CRUD']
           tags:
-              - { name: sonata.admin, manager_type: orm, group: "Справочники", label: Справочник банков }
+              - { name: sonata.admin, manager_type: orm, group: sonata.admin.group.content, label: Справочник банков }
           calls:
               - [ setTranslationDomain, [AppBundle]]
 
@@ -20,16 +20,24 @@ services:
           class: AppBundle\Admin\OrganizationAdmin
           arguments: [~, AppBundle\Entity\Organization, ~]
           tags:
-              - { name: sonata.admin, manager_type: orm, group: "Справочники", label: Справочник организаций }
+              - { name: sonata.admin, manager_type: orm, group: sonata.admin.group.content, label: Справочник организаций }
 
   sonata.admin.dictionary_ministry:
           class: AppBundle\Admin\DictionaryMinistryAdmin
           arguments: [~, AppBundle\Entity\DictionaryMinistry, ~]
           tags:
-              - { name: sonata.admin, manager_type: orm, group: "Справочники", label: Справочник министерств (ведомств) }
+              - { name: sonata.admin, manager_type: orm, group: sonata.admin.group.content, label: Справочник министерств (ведомств) }
 
   sonata.admin.dictionary_facility:
           class: AppBundle\Admin\FacilityAdmin
           arguments: [~, AppBundle\Entity\Facility, ~]
           tags:
-              - { name: sonata.admin, manager_type: orm, group: "Справочники", label: Справочник объектов }
+              - { name: sonata.admin, manager_type: orm, group: sonata.admin.group.content, label: Справочник объектов }
+
+  api_key_user_provider:
+      class: AppBundle\Security\ApiKeyUserProvider
+
+  apikey_authenticator:
+      class:  AppBundle\Security\ApiKeyAuthenticator
+      arguments: ["@api_key_user_provider"]
+      public: false
