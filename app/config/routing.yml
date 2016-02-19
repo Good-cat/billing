@@ -28,6 +28,9 @@ app:
 
 # Admin's routing
 
+sonata_user_security:
+    resource: "@SonataUserBundle/Resources/config/routing/sonata_security_1.xml"
+
 sonata_user_resetting:
     resource: "@SonataUserBundle/Resources/config/routing/sonata_resetting_1.xml"
     prefix: /resetting
@@ -57,12 +60,12 @@ _sonata_admin:
   type: sonata_admin
   prefix: /admin
 
-logout:
-  path: /profile/logout
-
-logincheck:
-  path: /profile/login_check
-
-login:
-  path: /profile/login
-  defaults: {_controller: SonataUserBundle:AdminSecurity:login}
+#logout:
+#  path: /profile/logout
+#
+#logincheck:
+#  path: /profile/login_check
+#
+#login:
+#  path: /profile/login
+#  defaults: {_controller: SonataUserBundle:AdminSecurity:login}
